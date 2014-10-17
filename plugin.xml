@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="it.eonardol.cordova.plugins.helloworld" version="0.0.1">
+   <name>HelloWorld</name>
+   <description>This plugin allows you to say hello and goodbye!</description>
+   <license>MIT</license>
+   <engines>
+      <engine name="cordova" version="&gt;=3.0.0" />
+   </engines>
+   <js-module src="www/HelloWorld.js" name="HelloWorld">
+      <clobbers target="plugins.helloworld" />
+   </js-module>
+   <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+         <feature name="HelloWorld">
+            <param name="android-package" value="it.eonardol.cordova.plugins.HelloWorld" />
+         </feature>
+      </config-file>
+      <source-file src="src/android/HelloWorld.java" target-dir="src/it/eonardol/cordova/plugins" />
+   </platform>
+</plugin>
